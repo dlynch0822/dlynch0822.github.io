@@ -59,4 +59,8 @@ p {
     display: block;
   }
 
+.portrait {
+  opacity: 0.5;
+}
+
 
