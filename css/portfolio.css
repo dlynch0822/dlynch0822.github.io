@@ -10,6 +10,10 @@ ul {
 	padding: 0;
 }
 
+p {
+  margin: 20px;
+}
+
 /* set width and alignment for text items */
 .content {
 	max-width: 960px;
@@ -54,4 +58,5 @@ ul {
     float: none;
     display: block;
   }
+
 

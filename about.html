@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+
+		//array and timing for slideshow
+		var i = 0;
+		var images = [];
+		var time = 3000;
+
+		//images for slideshow
+		images[0] = "https://freestocks.org/fs/wp-content/uploads/2015/10/playing_guitar-1000x667.jpg"
+		images[1] = "https://newcastlebeach.org/images/free-images-to-use-for-books-6.jpg"
+		images[2] = "https://images.unsplash.com/photo-1521336575822-6da63fb45455?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+		images[3] = "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+
+		//alter Images
+		function nextSlide(){
+			document.slide.src = images[i];
+
+			if(i < images.length - 1){
+				i++;
+			}
+			else{
+				i = 0;
+			}
+
+			setTimeout("nextSlide()", time);
+		}
+
+		window.onload = nextSlide;
+	</script>
+
 </head>
 
 <div class="content center">
@@ -20,34 +50,37 @@
         <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     </div>
 
-    	Experience:
+    <p>
+    	<b>Experience</b>:
     	<ul>
     		<li>B.S in Civil Engineering from Washington State University</li>
     		<li>Mechanical Engineer for General Dynamics Mission Systems</li>
     		<li>front-end experience including HTML, CSS, and JavaScript</li>
     		<li>Graduate Certificate in Software Design and Development (University
     			of Washington - Bothell)</li>
-
     	</ul>
+    </p>
 
-    </hr>
-
-        Skills:
+    <p>
+        <b>Skills</b>:
         <ul>
             <li>front end language including HTML, CSS, and Javascript</li>
             
-
         </ul>
+    </p>
 
-    </hr>
+    <p>
 
-    	Hobbies:
+    	<b>Hobbies</b>:</br></br>
+    	<!-- slideshow -->
+    	<img name="slide" width="600" height="200">
     	<ul>
     		<li>outdoor activities including kayaking, fishing and hiking</li>
     		<li>amateur guitar playing</li>
     		<li>reading and creative writing</li>
     		<li>media including movies and video games</li>
     	</ul>
+    </p>
     
 </body>
 </div>
