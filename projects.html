@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="css/portfolio.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+
+        //array and timing for slideshow
+        var i = 0;
+        var images = [];
+        var time = 3000;
+
+        //images for slideshow
+        images[0] = "https://i.imgur.com/MxrOq4b.png"
+        images[1] = "https://i.imgur.com/ezBycNo.png"
+        images[2] = "https://i.imgur.com/HGJSpav.png"
+        images[3] = "https://i.imgur.com/5ia0vFt.png"
+
+        //alter Images
+        function nextSlide(){
+            document.slide.src = images[i];
+
+            if(i < images.length - 1){
+                i++;
+            }
+            else{
+                i = 0;
+            }
+
+            setTimeout("nextSlide()", time);
+        }
+
+        window.onload = nextSlide;
+    </script>
+
 </head>
 
 <div class="content center">
@@ -26,19 +57,7 @@ A MEBN (MongoDB, Express, Bootstrap, Node) markdown blog. Per-session authentica
 </p>
 
 <p>
-<a href="https://github.com/dlynch0822/OnTheDL"><img src="https://i.imgur.com/MxrOq4b.png" height="450" width="550"></a>
-</p>
-
-<p>
-<a href="https://github.com/dlynch0822/OnTheDL"><img src="https://i.imgur.com/ezBycNo.png" height="450" width="550"></a>
-</p>
-
-<p>
-<a href="https://github.com/dlynch0822/OnTheDL"><img src="https://i.imgur.com/HGJSpav.png" height="200" width="200"></a>
-</p>
-
-<p>
-<a href="https://github.com/dlynch0822/OnTheDL"><img src="https://i.imgur.com/5ia0vFt.png" height="200" width="200"></a>
+<a href="https://github.com/dlynch0822/OnTheDL"><img name="slide" width="700" height="600"></a>
 </p>
 </br> </br> </br> </br>
 
@@ -48,7 +67,7 @@ Interactive map showing Washington State brewery locations. Brewery name, latitu
 </p>
 
 <p>
-<a href="https://github.com/dlynch0822/WA_brewery_api"><img src="https://i.imgur.com/AEKwR9a.png" height="350" width="400"></a>
+<a href="https://github.com/dlynch0822/WA_brewery_api"><img src="https://i.imgur.com/AEKwR9a.png" height="600" width="700"></a>
 </p>
 
 </body>
